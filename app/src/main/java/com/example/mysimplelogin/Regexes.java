@@ -8,9 +8,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by Parveen annpu on 11-11-2017.
- */
 
 public  enum Regexes {
     NAME("^[A-Za-z]+$"),

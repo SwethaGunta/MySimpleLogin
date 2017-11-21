@@ -32,9 +32,6 @@ public class MainActivity extends AppCompatActivity{
         final EditText ln = findViewById(R.id.LastName);
         final EditText pwd = findViewById(R.id.password);
         final EditText ph_no = findViewById(R.id.phone_number);
-        Log.d("CHANGING CODE","HELLO");
-
-        //ADD NEW ENUM
 
         final View.OnFocusChangeListener listener = new View.OnFocusChangeListener() {
 
@@ -43,7 +40,6 @@ public class MainActivity extends AppCompatActivity{
 
                 Boolean bool = val.validate((EditText)view, view.getId());
                 if (!bool) {
-                    Log.d("CHECK VALUES","The value is:"+((EditText)view).getText());
                     ((EditText)view).setError("Please enter valid details!");
                 }
             }
@@ -57,12 +53,7 @@ public class MainActivity extends AppCompatActivity{
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Log.d("HELLO","Hello");
-                Log.d("CHECKING FN","The string is : "+fn.getText().toString().isEmpty());
-                Log.d("CHECKING LN"," HAI: " + ln.getText().toString().isEmpty());
-
-                //PRINT ONLY IF ERROR FREE
+                //PRINT IF ERROR FREE
                 if(!fn.getText().toString().isEmpty() && !ln.getText().toString().isEmpty() && !ph_no.getText().toString().isEmpty() && !pwd.getText().toString().isEmpty())
                 {
                     if(fn.getError() == null && ln.getError()== null && pwd.getError()== null && ph_no.getError()== null)
@@ -73,11 +64,9 @@ public class MainActivity extends AppCompatActivity{
                         toast = Toast.makeText(getApplicationContext(), "Please wait while we login", Toast.LENGTH_LONG);
                         toast.show();
                         Intent login_success = new Intent(getApplicationContext(), Welcome.class);
-                        //params not sent
                         login_success.putExtra("first_name", first_name);
                         login_success.putExtra("last_name", last_name);
                         startActivity(login_success);
-                        //toast = Toast.makeText(getApplicationContext(),first_name + " " +last_name, Toast.LENGTH_LONG);
                     }
                     else
                     {
