@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/std_margin"
+        android:layout_marginBottom="@dimen/std_margin"
+        android:layout_marginRight="@dimen/std_margin"
+        android:layout_marginTop="@dimen/std_margin"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/std_margin"
+            android:id="@+id/welcomeimage"
+            android:src="@mipmap/ic_launcher"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="@dimen/std_padding"
+            android:paddingBottom="@dimen/std_padding"
+            android:paddingRight="@dimen/std_padding"
+            android:paddingTop="@dimen/std_padding"
+            android:layout_marginBottom="@dimen/std_margin"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/label"
+            android:editable="false"
+            android:cursorVisible="false"
+            android:textAllCaps="true"
+            android:paddingTop="@dimen/std_padding"
+            android:paddingRight="@dimen/std_padding"
+            android:paddingLeft="@dimen/std_padding"
+            android:paddingBottom="@dimen/std_padding"
+            android:layout_gravity="center_horizontal"
+            android:minEms="12"
+            android:maxEms="25"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
